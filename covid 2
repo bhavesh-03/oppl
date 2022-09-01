@@ -1,0 +1,81 @@
+import java.util.*;
+
+public class Main
+{   
+    public static void main(String[] args) { 
+    
+    Scanner cin = new Scanner(System.in);
+    
+    covid info[] = new covid[5] ;
+    covid obj = new covid() ;
+    
+    System.out.println("Enter the number of Patients: ");
+    int n= cin.nextInt();
+    
+    for(int i=0;i<n;i++){
+        System.out.println("Enter the details of Patient "+ (i+1));
+        System.out.println();
+        
+        System.out.println("Enter Patient name : ");
+        String name = cin.next();
+        
+        System.out.println("Enter Blood group : ");
+        String bloodGroup  =cin.next() ;
+        
+        System.out.println("Enter Id : ");
+        int id = cin.nextInt();
+        
+        System.out.println("Enter the DOB :");
+        int dob = cin.nextInt();
+        
+        System.out.println("Enter the tel : ");
+        int tel = cin.nextInt();
+        
+        System.out.println("Enter Adhar No. :");
+        int adharNo = cin.nextInt();
+        
+        System.out.println("Enter testReport : ");
+        String testReport = cin.next();
+        
+        covid Info = new covid(name,bloodGroup,id,dob,tel,adharNo,testReport);
+        info[i] = Info ;
+        //info[i]=patientInput;
+        info[i].InfoDisplay() ;
+        }
+    }
+}
+
+
+class covid{
+    String patientname ;
+    String patientBG ;
+    int patientid;
+    int patientdob;
+    int patienttel ;
+    int patientAdhar ;
+    String patientTestR ;
+    
+    covid(){
+        System.out.println("Constructor invoked :");
+    }
+    
+    public covid(String name , String bloodGroup , int id , int dob ,int tel ,int adharNo , String testReport){
+        patientname = name;
+        patientBG = bloodGroup;
+        patientid = id;
+        patientdob = dob;
+        patienttel = tel;
+        patientAdhar = adharNo;
+        patientTestR = testReport;
+    }
+    
+    public void InfoDisplay(){
+        System.out.println("Name of the patient is :" + patientname);
+        System.out.println("Blood Group of the patient is :" + patientBG);
+        System.out.println("Id of the patient is :" + patientid);
+        System.out.println("DOB of the patient is :" + patientdob);
+        System.out.println("Tel of the patient is :" + patienttel);
+        System.out.println("adharNo of the patient is :" +patientAdhar);
+        System.out.println("testReport of the patient is :" + patientTestR);
+    }
+}
