@@ -1,0 +1,47 @@
+import java.util.*;
+
+public class Main
+{   
+    public static void main(String[] args) { 
+    
+    // Patient[] = new Patient[5]    
+        
+	covid c1 = new covid();
+	c1.display();
+	}
+}
+
+
+ class covid{
+     String name ;
+        int id;
+        int dob;
+        int tel ;
+        int adharNo ;
+        String testReport ;
+    
+    covid(){
+        Scanner cin = new Scanner(System.in);
+        System.out.println("Enter Patient name : ");
+        name = cin.nextLine();
+        System.out.println("Enter Id : ");
+        id = cin.nextInt();
+        System.out.println("Enter the DOB :");
+        dob = cin.nextInt();
+        System.out.println("Enter the tel : ");
+        tel = cin.nextInt();
+        System.out.println("Enter Adhar No. :");
+        adharNo = cin.nextInt();
+        System.out.println("Enter testReport : ");
+        testReport = cin.next();
+    }
+    
+    public void display(){
+        System.out.println("Name of the patient is :" + name);
+        System.out.println("Id of the patient is :" + id);
+        System.out.println("DOB of the patient is :" + dob);
+        System.out.println("Tel of the patient is :" + tel);
+        System.out.println("adharNo of the patient is :" +adharNo);
+        System.out.println("testReport of the patient is :" + testReport);
+    }
+}
