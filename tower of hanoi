@@ -1,0 +1,41 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+
+
+void ToH(int n, int A, int C, int B)
+{
+    
+    if (n==1)
+    {
+        printf("\n move disc %d to %d", A , C);
+        return;
+    }
+    ToH(n-1,A,B,C);
+    printf("\n move disc %d to %d", A , C);
+    ToH(n-1,B,C,A);
+      
+    
+}
+
+int main()
+{
+    
+    int a=1,b=2,c=3;
+    int n;
+    printf("Enter the no. of discs: ");
+    scanf("%d", &n); 
+    ToH(n,a,c,b);
+    
+
+    return 0;
+}
+
+
+
