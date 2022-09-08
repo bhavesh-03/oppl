@@ -1,0 +1,81 @@
+/******************************************************************************
+
+Derive a subclass called Student from the superclass Computer_Engg. The class 
+Student inherits all the member variables 
+(Name,Roll_Number,GR_Number,hobbies,etc) and methods ( getGR(), 
+getName(), among others) from its superclass Computer_Engg, also further 
+defines a variable called area_of_interest,marks & two public methods
+*******************************************************************************/
+import java.util.*;
+
+
+class Computer_Engg
+{
+  protected int Roll_no;
+  protected int Gr_no;
+  protected String name;
+  protected String Hobby;
+  
+  Scanner input = new Scanner(System.in);
+ 
+  Computer_Engg(int Rno,String Hob)
+  {
+      this.Roll_no = Rno;
+      this.Hobby = Hob;
+  }
+  
+  public int getGR()
+  {
+      System.out.println("Enter GR Number :");
+      Gr_no = input.nextInt();
+      return (Gr_no);
+  }
+  
+  public String getName()
+  {
+      System.out.println("Enter your name :");
+      name = input.nextLine();
+      return (name);
+  }
+  }
+
+class Student extends Computer_Engg
+ {
+	    public String area_of_interest;
+	    public int marks;
+	    Scanner input = new Scanner(System.in);
+	    
+	    public Student(int rollno,String hobby,int mymarks)
+	    {
+	        super(rollno,hobby);
+	        marks = mymarks;
+	    }
+	    
+	    public void getAreaofInterest()
+	    {
+	   	    System.out.print("Enter your area of interest : ");
+	        area_of_interest = input.nextLine();
+	    }
+	    
+	    public void displayDetails(String myname, int mygrnum){
+	     
+	    System.out.println("My Roll Number is :"+super.Roll_no);
+	    System.out.println("The GR Number is :"+mygrnum);
+	    System.out.println("My name is :" +myname);
+	    System.out.println("My Marks are :"+marks);
+	    System.out.println("My Hobby is :"+super.Hobby);
+	    System.out.println("Area of interest is :"+area_of_interest);
+	   }
+ }
+
+public class Main{
+    public static void main(String args[]){
+    Student stud = new Student(1,"Reading",80);
+    String name = stud.getName();
+    int grnum = stud.getGR();
+    stud.getAreaofInterest();
+    stud.displayDetails(name,grnum);
+}
+}
+
+
