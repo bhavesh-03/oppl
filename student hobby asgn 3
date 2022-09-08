@@ -1,4 +1,4 @@
-import java.util.scanner  ;
+import java.util.Scanner  ;
 
 
 public class Main
@@ -18,13 +18,13 @@ public class Main
         
         public int rollNo(){
             System.out.println("Enter your Roll No: ") ;
-            rollNo = cin.nexInt() ;
+            rollNo = cin.nextInt() ;
             return rollNo ;
         }
         
         public int GrNo(){
             System.out.println("Enter your Gr No: ") ;
-            GrNo = cin.nexInt() ;
+            GrNo = cin.nextInt() ;
             return GrNo ;
         }
         
@@ -56,16 +56,16 @@ public class Main
                 return Area_of_interest ;
             }
             
-            public int getMarks(){
+            public int marks(){
                 System.out.println("Enter your Marks : ") ;
-                marks = input.nexInt() ;
-                return getMarks ;
+                marks = input.nextInt() ;
+                return marks ;
             }
             
             
             void display(){
                 System.out.println("Your Area_of_interest is : " + Area_of_interest);
-                System.out.println("Your Marks are : " + Marks);
+                System.out.println("Your Marks are : " + marks);
             }
             
         } 
@@ -83,7 +83,7 @@ public class Main
 		s1.marks() ;
 		
 		
-		s1.out() ;
+		s1.Output() ;
 		
 		s1.display();
 		
